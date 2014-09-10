@@ -1,0 +1,41 @@
+2 UWSGI workers, 10 greenlets
+siege -f load-tests/local-urls.txt --internet --concurrent=10 --time=30s
+** SIEGE 3.0.5
+** Preparing 10 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege..      done.
+
+Transactions:		          70 hits
+Availability:		      100.00 %
+Elapsed time:		       29.33 secs
+Data transferred:	        0.24 MB
+Response time:		        4.15 secs
+Transaction rate:	        2.39 trans/sec
+Throughput:		        0.01 MB/sec
+Concurrency:		        9.90
+Successful transactions:          70
+Failed transactions:	           0
+Longest transaction:	        4.30
+Shortest transaction:	        4.07
+
+
+
+
+siege -f load-tests/local-urls.txt --internet --concurrent=10 --time=30s
+** SIEGE 3.0.5
+** Preparing 10 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege..      done.
+
+Transactions:		          37 hits
+Availability:		      100.00 %
+Elapsed time:		       29.35 secs
+Data transferred:	        0.13 MB
+Response time:		        6.62 secs
+Transaction rate:	        1.26 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		        8.35
+Successful transactions:          37
+Failed transactions:	           0
+Longest transaction:	        9.35
+Shortest transaction:	        4.14
