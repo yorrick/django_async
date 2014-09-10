@@ -1,0 +1,43 @@
+{% extends 'root.html' %}
+{% load i18n %}
+{% load bootstrap3 %}
+
+
+{% block content %}
+
+    {% get_current_language as LANGUAGE_CODE %}
+
+    <div class="row">
+
+        <div class="col-md-6 col-sm-6">
+
+            <h3>Messages in {{ LANGUAGE_CODE }}</h3>
+
+            {% if message_list %}
+
+                <ul>
+                    {% for message in message_list %}
+                        <li>
+                            <a href="{% url 'message:detail' message.id %}">
+                                <span>{{ message.subject }}</span>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No message have been reveived</p>
+            {% endif %}
+
+        </div>
+
+        <div class="col-md-6 col-sm-6">
+            <form action="{% url 'message:index' %}" method="post">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                <input class="btn btn-default" type="submit" value="Add">
+            </form>
+        </div>
+
+    </div>
+
+{% endblock %}

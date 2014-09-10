@@ -22,6 +22,7 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': 'postgres',
         'HOST': '192.168.59.103',  # host of docker VM
+#        'HOST': '192.168.59.105',  # host of docker VM
 #        'HOST': 'db_1',
         'PORT': 5432,
     }

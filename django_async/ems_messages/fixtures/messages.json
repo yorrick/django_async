@@ -1,0 +1,24 @@
+[
+{
+    "fields": {
+        "content": "some content",
+        "source": "some-source",
+        "destination": "some-dest",
+        "date": "2014-09-05T15:56:52.516Z",
+        "user": 1
+    },
+    "model": "ems_messages.message",
+    "pk": 1
+},
+{
+    "fields": {
+        "content": "hkjjkhkhkj",
+        "source": "idfgvilg",
+        "destination": "igyiuygkig",
+        "date": "2014-09-05T15:58:37.899Z",
+        "user": 1
+    },
+    "model": "ems_messages.message",
+    "pk": 2
+}
+]

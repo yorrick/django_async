@@ -8,3 +8,6 @@ web:
     - db
 db:
   image: postgres
+  ports:
+    # we map this port to be able to use postgres from outside docker (fron host machine)
+    - "5432:5432"

@@ -1,0 +1,18 @@
+{% extends 'root.html' %}
+{% load i18n %}
+
+{% block content %}
+
+    <p>
+        <a href="{% url 'message:index' %}">{% trans "Return to list page" %}</a>
+    </p>
+
+    <h1>{{ message.subject }}</h1>
+
+    <p>
+        <span>{{ message.source }}</span>
+        <span>{{ message.destination }}</span>
+        <span>{{ message.content }}</span>
+    </p>
+
+{% endblock %}
