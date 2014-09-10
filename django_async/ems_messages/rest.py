@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals, absolute_import
+
 from rest_framework import routers, serializers, viewsets
 from django_async.ems_messages.models import Message
 from django.contrib.auth.models import User

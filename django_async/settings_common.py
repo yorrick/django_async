@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Django settings for django_async project.
 
@@ -37,13 +38,13 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootstrap3',
-    'django_async.ems_messages',
     'rest_framework',
+    'django_async.ems_messages',
 )
 
 
 MIDDLEWARE_CLASSES = (
-    'django_async.ems_messages.utils.TimerMiddleware',
+    'django_async.utils.TimerMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     #    'django.middleware.cache.UpdateCacheMiddleware',
@@ -188,3 +189,5 @@ REST_FRAMEWORK = {
     ]
 }
 
+# this parameter allows to slow database queries by N seconds
+SLOW_DB_QUERIES_BY = 0

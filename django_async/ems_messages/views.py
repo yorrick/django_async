@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals, absolute_import
+
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django_async.ems_messages.models import Message
@@ -14,7 +17,7 @@ from django.utils.cache import get_cache_key
 import random
 import logging
 
-from django_async.ems_messages.api import save_message
+from django_async.ems_messages.api import save_message, message_list
 
 
 logger = logging.getLogger(__name__)
@@ -80,5 +83,5 @@ def index(request):
 
 def create_default_context():
     return {
-        'message_list': Message.objects.order_by('-date')[:5],
+        'message_list': message_list(),
     }

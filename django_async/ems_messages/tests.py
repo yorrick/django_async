@@ -1,9 +1,12 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals, absolute_import
+
 from django.test import TestCase
 from django_async.ems_messages.api import save_message
 from django_async.ems_messages.models import Message
 from django.core.urlresolvers import reverse
 
-from django_async.ems_messages.utils import language
+from django_async.utils import language
 
 
 class ApiTest(TestCase):

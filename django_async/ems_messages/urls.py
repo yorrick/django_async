@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals, absolute_import
+
 from django.conf.urls import patterns, url
 from django_async.ems_messages import views
 from django.views.decorators.cache import cache_page

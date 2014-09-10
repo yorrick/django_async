@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Production settings
 from django_async.settings_common import *
 
