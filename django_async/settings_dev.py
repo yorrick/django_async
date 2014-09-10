@@ -37,5 +37,7 @@ CACHES = {
 }
 
 
-SLOW_DB_QUERIES_BY = 0
+SLOW_DB_QUERIES_BY = 1
 
+
+WSGI_APPLICATION = 'django_async.wsgi_app_dev.application'

@@ -66,8 +66,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 ROOT_URLCONF = 'django_async.urls'
 
-WSGI_APPLICATION = 'django_async.wsgi_app.application'
-
 
 # do not tie transactions to http requests
 ATOMIC_REQUESTS = False
