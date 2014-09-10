@@ -1,3 +1,6 @@
 -r requirements-common.txt
 
-uwsgi
+uWSGI==2.0.7
+gevent==1.0.1
+psycogreen==1.0
+#gevent-psycopg2==0.0.3

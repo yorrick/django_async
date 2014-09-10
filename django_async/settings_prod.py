@@ -41,3 +41,4 @@ CACHES = {
     }
 }
 
+SLOW_DB_QUERIES_BY = 5
