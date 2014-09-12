@@ -3,6 +3,3 @@
   roles:
   - { role: init, tags: [ 'init' ] }
   - { role: nginx, tags: [ 'nginx' ] }
-  - { role: php5-fpm, tags: [ 'php' ] }
-  - { role: composer, tags: [ 'composer', 'php' ] }
-  - { role: phpcommon, tags: [ 'php' ] }
