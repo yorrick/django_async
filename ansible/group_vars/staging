@@ -1,0 +1,3 @@
+domain_name: staging.myapp.com
+db_password: LessSecretButStillSecurePassword
+csrf_secret: St4gingCSRFToken
