@@ -1,14 +1,43 @@
 web:
   build: .
 #  command: python manage.py runserver 0.0.0.0:8000 --settings=django_async.settings_prod
-  command: uwsgi uwsgi.ini
+#  command: uwsgi uwsgi.ini
   ports:
     - "9090:9090"
     - "9091:9091"
+  volumes:
+    - /Users/yorrick/work/django_async:/app
   links:
     - db
+
 db:
-  image: postgres
+  image: postgres:9.4
   ports:
-    # we map this port to be able to use postgres from outside docker (fron host machine)
+    # we map this port to be able to use postgres from outside docker (from host machine)
     - "5432:5432"
+
+
+#djangoasyncvolume:
+#  image: busybox
+#  volumes:
+#    - /django_async
+#
+#
+## this cannot work in fig
+## docker run --rm -v /usr/local/bin/docker:/docker -v /var/run/docker.sock:/docker.sock svendowideit/samba django_async_data
+#djangoasyncsamba:
+#  image: svendowideit/samba
+#  command: djangoasyncvolume  # for this image we have to give the name of the data container
+#  volumes:
+#    - "/usr/local/bin/docker:/docker"
+#    - "/var/run/docker.sock:/docker.sock"
+#
+#
+## test container
+## docker run -it --volumes-from django_async_data --name python:2.7 /bin/bash
+#test:
+#  image: python:2.7
+#  command: /bin/bash
+#  volumes_from:
+#    - djangoasyncvolume
+#
