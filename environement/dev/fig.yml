@@ -1,0 +1,16 @@
+web:
+  build: .
+  ports:
+    - "8000:8000"
+  volumes:
+    - /Users/yorrick/work/django_async:/app
+  links:
+    - db
+
+db:
+  image: postgres:9.4
+  ports:
+    # we map this port to be able to use postgres from outside docker (from host machine)
+    - "5432:5432"
+
+
