@@ -12,5 +12,6 @@
       role: ANXS.postgresql,
       postgresql_version: '9.3',
       postgresql_databases: [{ name: 'django_async'}],
+      postgresql_users: [{ name: 'toto', pass: 'toto', encrypted: 'no'}],
       tags: [ 'database' ]
     }
