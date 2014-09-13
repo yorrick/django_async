@@ -17,6 +17,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box_url = "http://files.vagrantup.com/precise32.box"
 
   config.vm.network "forwarded_port", guest: 5432, host: 5432
+  config.vm.network "forwarded_port", guest: 80, host: 8000
   config.vm.network :private_network, ip: "192.168.56.121"
   # config.ssh.forward_agent = true
 
@@ -43,5 +44,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         ansible.inventory_path = "ansible/inventories/dev_servers"
         ansible.limit = 'all'
     end
+
+    # config.vm.hostname = "www.testing.de"
+    config.hostsupdater.aliases = ["django-async.local"]
 
 end
