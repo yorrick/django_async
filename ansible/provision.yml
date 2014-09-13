@@ -3,3 +3,14 @@
   roles:
   - { role: init, tags: [ 'init' ] }
   - { role: nginx, tags: [ 'nginx' ] }
+
+- hosts: database
+  sudo: true
+  roles:
+  - { role: init, tags: [ 'init' ] }
+  - {
+      role: ANXS.postgresql,
+      postgresql_version: '9.3',
+      postgresql_databases: [{ name: 'django_async'}],
+      tags: [ 'database' ]
+    }
