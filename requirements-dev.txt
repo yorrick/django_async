@@ -1,3 +1,4 @@
 -r requirements-common.txt
 
 fig==0.5.2
+ipython

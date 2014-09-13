@@ -11,6 +11,7 @@
     - wget
     - python-software-properties
     - acl
+    - libpq-dev  # this is used by psycopg2
 
 - name: Update apt
   sudo: yes

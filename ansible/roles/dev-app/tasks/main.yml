@@ -1,0 +1,4 @@
+#---
+- name: Run dev server (TOTO remove this)
+  shell: chdir={{ app_dir }} /usr/bin/python{{ python_version }} manage.py runserver
+

@@ -1,3 +1,4 @@
-domain_name: dev.myapp.com
-db_password: NonSecurePassword
-csrf_secret: d3vCSRFToken
+---
+app_dir: /home/vagrant/app/
+venv_dir: app_venv
+python_requirements: requirements-dev.txt

@@ -1,0 +1,10 @@
+---
+- name: Create app directory
+  sudo: yes
+  file: path={{ app_dir }} owner=root group=root mode=0755 state=directory
+
+- name: Create dev virtualenv
+  shell: virtualenv --python=/usr/bin/python{{ python_version }} --no-site-packages --distribute {{ app_dir }}/{{ venv_dir }}
+
+- name: Install python requirements
+  shell: "{{ app_dir }}/{{ venv_dir }}/bin/pip install -r {{ app_dir }}/{{ python_requirements }}"
