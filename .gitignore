@@ -1,6 +1,7 @@
 *.pyc
 .idea
 venv
+app_venv
 staticfiles
 *.swp
 .vagrant

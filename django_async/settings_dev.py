@@ -18,10 +18,9 @@ ALLOWED_HOSTS = []
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-#        'HOST': '192.168.59.103',  # host of docker VM
-        'HOST': 'db_1',  # host of DB server (hostname is set by dockerlinks)
+        'NAME': 'django_async',
+        'USER': 'toto',
+        'HOST': 'localhost',
         'PORT': 5432,
     }
 }
