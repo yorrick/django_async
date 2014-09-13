@@ -1,6 +1,8 @@
 server {
     listen  80;
 
+{#
+
     root {{ doc_root }};
     index index.html index.php;
 
@@ -9,6 +11,7 @@ server {
     if (-f {{ doc_root }}/maintenance.html) {
         return 503;
     }
+#}
 
     error_page 503 @maintenance;
 
