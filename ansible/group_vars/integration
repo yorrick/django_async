@@ -1,0 +1,6 @@
+---
+app_dir: /app
+venv_dir: /virtualenv
+python_requirements: requirements-prod.txt
+ansible_ssh_user: ansible
+ansible_ssh_port: 22

@@ -41,3 +41,4 @@ SLOW_DB_QUERIES_BY = 0
 
 
 WSGI_APPLICATION = 'django_async.wsgi_app_dev.application'
+

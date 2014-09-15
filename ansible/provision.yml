@@ -1,8 +1,9 @@
-- hosts: web
+- hosts: app-server
   sudo: true
   roles:
     - { role: init, tags: [ 'init' ] }
     - { role: nginx, tags: [ 'nginx' ] }
+    - { role: Stouts.python, python_version: "{{ python_version }}" }
     - app
 
 - hosts: database
@@ -28,5 +29,6 @@
 - hosts: python-dev
   sudo: true
   roles:
+    - { role: init, tags: [ 'init' ] }
     - { role: Stouts.python, python_version: "{{ python_version }}" }
-    - dev-app
+    - app

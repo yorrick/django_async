@@ -1,9 +1,9 @@
-[web]
+[app-server]
 8.8.4.4
 
 [database]
 4.2.2.3
 
 [staging:children]
-web
+app-server
 database
