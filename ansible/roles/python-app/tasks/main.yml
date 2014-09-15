@@ -9,6 +9,8 @@
 
 - name: Create virtualenvs for apps
   shell: virtualenv --python=/usr/bin/python{{ python_version }} --no-site-packages --distribute {{ venv_dir }}/{{ item }} && {{ venv_dir }}/{{ item }}/bin/pip install -r {{ app_dir }}/{{ item }}/{{ python_requirements }}
+  args:
+    creates: "{{ venv_dir }}/{{ item }}"
   with_items:
     - "{{ app_names }}"
 
