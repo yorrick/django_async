@@ -1,4 +1,6 @@
 # put the default config here
 ---
 python_version: 2.7
-
+app_dir: /srv/app
+venv_dir: /srv/virtualenv
+app_names: [ "django_async" ]

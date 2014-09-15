@@ -1,4 +1,2 @@
 ---
-app_dir: /home/vagrant/app/
-venv_dir: /home/vagrant/virtualenv
 python_requirements: requirements-dev.txt

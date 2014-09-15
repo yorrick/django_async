@@ -2,9 +2,10 @@
   sudo: true
   roles:
     - { role: init, tags: [ 'init' ] }
+    - python-app
+#    - uwsgi
     - { role: nginx, tags: [ 'nginx' ] }
-    - { role: Stouts.python, python_version: "{{ python_version }}" }
-    - app
+
 
 - hosts: database
   sudo: true
@@ -30,5 +31,4 @@
   sudo: true
   roles:
     - { role: init, tags: [ 'init' ] }
-    - { role: Stouts.python, python_version: "{{ python_version }}" }
-    - app
+    - python-app
