@@ -13,6 +13,8 @@
     - acl
     - libpq-dev  # this is used by psycopg2
     - make
+    - libpcre3
+    - libpcre3-dev
 
 - name: Update apt
   sudo: yes
