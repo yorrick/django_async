@@ -12,6 +12,7 @@
     - python-software-properties
     - acl
     - libpq-dev  # this is used by psycopg2
+    - make
 
 - name: Update apt
   sudo: yes

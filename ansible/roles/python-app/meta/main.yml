@@ -1,3 +1,0 @@
----
-dependencies:
-  - { role: Stouts.python, python_version: "{{ python_version }}" }

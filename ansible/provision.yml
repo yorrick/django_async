@@ -2,7 +2,7 @@
   sudo: true
   roles:
     - { role: init, tags: [ 'init' ] }
-    - python-app
+    - python-env
 #    - uwsgi
     - { role: nginx, tags: [ 'nginx' ] }
 
@@ -31,4 +31,4 @@
   sudo: true
   roles:
     - { role: init, tags: [ 'init' ] }
-    - python-app
+    - python-env
