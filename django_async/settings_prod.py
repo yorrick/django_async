@@ -21,7 +21,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'postgres',
         'USER': 'postgres',
-        'HOST': 'db_1',  # host of DB server (hostname is set by dockerlinks)
+        'HOST': 'localhost', 
         'PORT': 5432,
         }
 }
