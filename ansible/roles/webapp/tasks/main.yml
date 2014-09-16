@@ -1,0 +1,8 @@
+---
+
+- name: Install uwsgi
+  command: "{{ python_dir }}/python{{ python_version }}/bin/pip install uWSGI==2.0.7"
+#  args:
+#    creates: "{{ python_dir }}/python{{ python_version }}/lib/python{{ python_major_version }}/site-packages/virtualenv.py"
+
+

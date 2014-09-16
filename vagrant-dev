@@ -48,7 +48,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
             ansible.playbook = "ansible/provision.yml"
             ansible.inventory_path = "ansible/inventories/dev_servers"
             ansible.limit = 'all'
-            ansible.verbose = 'vvv'
+            ansible.verbose = 'vv'
         end
 
         # dev.vm.hostname = "www.testing.de"

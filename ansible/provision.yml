@@ -2,9 +2,8 @@
   sudo: true
   roles:
     - { role: init, tags: [ 'init' ] }
-    - python-env
-#    - uwsgi
     - { role: nginx, tags: [ 'nginx' ] }
+    - webapp
 
 
 - hosts: database
@@ -26,6 +25,7 @@
         postgresql_listen_addresses: '*',
         tags: [ 'database' ]
       }
+
 
 - hosts: python-dev
   sudo: true
