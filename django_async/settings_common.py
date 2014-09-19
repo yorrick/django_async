@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-from os.path import dirname, join
+from os.path import dirname, join, pardir, abspath
 
 PROJECT_ROOT = dirname(__file__)
 FRONTEND_ROOT = join(PROJECT_ROOT, 'frontend')
@@ -117,7 +117,7 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = join(PROJECT_ROOT, 'staticfiles')
+STATIC_ROOT = abspath(join(PROJECT_ROOT, pardir, 'staticfiles'))
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
