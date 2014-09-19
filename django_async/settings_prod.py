@@ -19,8 +19,8 @@ ALLOWED_HOSTS = ['*']
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'USER': 'postgres',
+        'NAME': 'django_async',
+        'USER': 'toto',
         'HOST': 'localhost',
         'PORT': 5432,
         }
@@ -41,4 +41,4 @@ CACHES = {
     }
 }
 
-SLOW_DB_QUERIES_BY = 1
+SLOW_DB_QUERIES_BY = 0
